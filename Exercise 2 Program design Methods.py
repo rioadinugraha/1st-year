@@ -59,7 +59,7 @@ def overlapping(first,second):
     if k == 0:
         print("false")
 
-# 7.7.	Define a function generate_n_chars() that takes an integer n and a character c and returns a string, n characters long, consisting only of c:s. For example, generate_n_chars(5,"x") should return the string "xxxxx". (Python is unusual in that you can actually write an expression 5 * "x" that will evaluate to "xxxxx". For the sake of the exercise you should ignore that the problem can be solved in this manner.)
+# 7.Define a function generate_n_chars() that takes an integer n and a character c and returns a string, n characters long, consisting only of c:s. For example, generate_n_chars(5,"x") should return the string "xxxxx". (Python is unusual in that you can actually write an expression 5 * "x" that will evaluate to "xxxxx". For the sake of the exercise you should ignore that the problem can be solved in this manner.)
 def generate_n_chars(mult,chara):
     prnt = str()
     i=0
@@ -68,13 +68,17 @@ def generate_n_chars(mult,chara):
     print(prnt)
 
 
-#8.
+#8.8.	Define a procedure histogram() that takes a list of integers and prints a histogram to the screen. For example, histogram([4, 9, 7]) should print the following:
+#****
+#*********
+#*******
+
 
 def histogram(k):
     i=0
     for i in range (0,len(k)):
         print("*"*k[i])
-#9.
+#9.	Write a program that maps a list of words into a list of integers representing the lengths of the corresponding words.
 
 def wordLength(s):
     i=0
@@ -83,8 +87,7 @@ def wordLength(s):
         list.append(len(s[i]))
     print(list)
 
-#wordLength(["ok","yo
-# u","Boda"])
+#wordLength(["ok","you","Boda"])
 
 #10.
 def maxWord(s):

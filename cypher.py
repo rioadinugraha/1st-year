@@ -71,6 +71,7 @@ def Decryptor(string,Rot):
             Cypher = Decrypt.get(string[i])
             string[i] = Cypher
     print(temp.join(string))
+    print(Decrypt)
 
 
 Choose = int(input("type 1 for encryption, type 2 for decryption"))
