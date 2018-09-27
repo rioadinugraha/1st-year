@@ -58,6 +58,7 @@ def overlapping(first,second):
         j= 0
     if k == 0:
         print("false")
+overlapping([1,2,3,4,5],[6,7,4,9,10])
 
 # 7.Define a function generate_n_chars() that takes an integer n and a character c and returns a string, n characters long, consisting only of c:s. For example, generate_n_chars(5,"x") should return the string "xxxxx". (Python is unusual in that you can actually write an expression 5 * "x" that will evaluate to "xxxxx". For the sake of the exercise you should ignore that the problem can be solved in this manner.)
 def generate_n_chars(mult,chara):
@@ -66,7 +67,6 @@ def generate_n_chars(mult,chara):
     for i in range (0,mult):
         prnt += chara
     print(prnt)
-
 
 #8.8.	Define a procedure histogram() that takes a list of integers and prints a histogram to the screen. For example, histogram([4, 9, 7]) should print the following:
 #****
@@ -102,26 +102,25 @@ def maxWord(s):
 
 #11.
 def pangram(text):
-    text = text.lower()
+    sentence = text.lower()
     req =["q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m"]
-    sentence = text
-    i=0
-    j=0
+    i = 0
+    j = 0
     k = 0
-    while i<len(req):
-        while j <len(sentence):
+    while i < len(req):
+        while j < len(sentence):
             if req[i] == sentence[j]:
                 k += 1
                 break
             j=j+1
         i=i+1
         j= 0
-    if k == 26:
+    if k == len(req):
         print("True")
     else:
         print("False")
 
-#pangram("The quick brown fox jumps over the lazy dog")
+pangram("The the quick quick brown brown fox fox jumps jumps over over the the lazy lazy dog dog ")
 
 12.
 def make_ing_form(a):

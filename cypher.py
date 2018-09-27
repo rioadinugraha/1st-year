@@ -10,20 +10,16 @@ def Encryptor(string,Rot):
         if index > (len(Lower)-1):
             index = index - 26
             Encrypt.update({Lower[i]:Lower[index]})
-            Decrypt.update({Lower[index]:Lower[i]})
         else:
             Encrypt.update({Lower[i]:Lower[index]})
-            Decrypt.update({Lower[index]:Lower[i]})
     index = 0
     for i in range(0, len(Upper)):
         index = i+Rot
         if index > (len(Upper)-1):
             index = index - 26
             Encrypt.update({Upper[i]:Upper[index]})
-            Decrypt.update({Upper[index]:Upper[i]})
         else:
             Encrypt.update({Upper[i]:Upper[index]})
-            Decrypt.update({Upper[index]:Upper[i]})
     Cypher = 0
     i = 0
     temp = ""
@@ -46,20 +42,16 @@ def Decryptor(string,Rot):
         index = i+Rot
         if index > (len(Lower)-1):
             index = index - 26
-            Encrypt.update({Lower[i]:Lower[index]})
             Decrypt.update({Lower[index]:Lower[i]})
         else:
-            Encrypt.update({Lower[i]:Lower[index]})
             Decrypt.update({Lower[index]:Lower[i]})
     index = 0
     for i in range(0, len(Upper)):
         index = i+Rot
         if index > (len(Upper)-1):
             index = index - 26
-            Encrypt.update({Upper[i]:Upper[index]})
             Decrypt.update({Upper[index]:Upper[i]})
         else:
-            Encrypt.update({Upper[i]:Upper[index]})
             Decrypt.update({Upper[index]:Upper[i]})
     Cypher = 0
     i = 0
