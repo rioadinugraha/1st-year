@@ -62,10 +62,6 @@ class Bank():
 
 
 def main():
-    indexValue = 0
-    accList = []
-    strAccList = []
-    customerList =[]
     strBankList = []
     bankList = []
     StatusA = "Y"

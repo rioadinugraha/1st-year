@@ -11,4 +11,12 @@ def sorting(list):
     return list
 
 
-print(sorting([5,2,200,8,7,4,5,98,54,62]))
+def main():
+    numbers=[]
+    status = "y"
+    while status.upper() != "N":
+        numbers.append(int(input("please input an integer")))
+        status = str(input("do you want to continue? Y/N"))
+    print(sorting(numbers))
+
+main()
