@@ -33,8 +33,9 @@ class Ship():
             self.centerX -= self.ai_Settings.ship_speed_factor
         if self.moving_up and self.rect.top > 0:
             self.centerY -= self.ai_Settings.ship_speed_factor
-        if self.moving_down and self.rect.bottom <self.screen_rect.bottom:
+        if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
             self.centerY += self.ai_Settings.ship_speed_factor
+
         # update rect object from self.center.
         self.rect.centerx = self.centerX
         self.rect.centery = self.centerY
