@@ -26,6 +26,7 @@ def run_game():
 
     # Watch for keyboard and mouse events.
         if stats.game_active:
+            screen.blit(ai_Setting.bg,[0,0])
             ship.update()
             gf.update_bullets(ai_Setting,screen,ship,aliens,bullets)
             gf.update_aliens(ai_Setting,stats,screen,ship,aliens,bullets)
