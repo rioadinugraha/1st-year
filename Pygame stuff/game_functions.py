@@ -19,7 +19,8 @@ def check_keydown_events(event,ai_Settings,screen,ship,bullets):
         ship.moving_down = True
     elif event.key ==pygame.K_SPACE:
         fire_bullet(ai_Settings, screen, ship, bullets)
-        ai_Settings.bullets_sound.set_volume(0.2)
+        ai_Settings.bullets_sound.set_volume(0.1
+                                             )
         ai_Settings.bullets_sound.play()
     elif event.key == pygame.K_q:
         sys.exit()

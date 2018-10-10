@@ -1,6 +1,6 @@
 import pygame.font
 from pygame.sprite import Group
-from ship import Ship
+from lives import lives
 class scoreboard():
 
     def __init__(self,ai_Setting, screen,stats):
@@ -52,7 +52,7 @@ class scoreboard():
     def prep_ships(self):
         self.ships = Group()
         for ship_number in range (self.stats.ships_left):
-            ship = Ship(self.ai_settings,self.screen)
+            ship = lives(self.ai_settings,self.screen)
             ship.rect.x = 10 + ship_number*ship.rect.width
             ship.rect.y = 10
             self.ships.add(ship)
