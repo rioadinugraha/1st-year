@@ -14,13 +14,30 @@ class Settings():
         self.ship_speed_factor = 3
         self.ship_limit = 2
         #bullet settings
-        self.bullet_speed_factor = 5
-        self.bullets_allowed = 3
+        self.bullets_allowed = 7
         self.bullets_sound = pygame.mixer.Sound('C:\\untitled\\First work\\Pygame stuff\\images\\laset.wav')
         #alineu settingu
-        self.alien_Speed_factor =2
         self.fleet_drop_Speed = 10
         #1 = right, -1=left
-        self.fleet_direction =1
+        #speedo increase
+        self.speedup_scale = 1.2
+        self.initialize_dynamic_settings()
+        #score increase
+        self.score_scale =1.5
 
+    def initialize_dynamic_settings(self):
+        self.ship_speed_factor = 3
+        self.bullet_speed_factor = 5
+        self.alien_Speed_factor = 2
+
+        #fleet d
+        self.fleet_direction =1
+        self.alien_points = 50
+
+    def increase_Speed(self):
+        self.ship_speed_factor *= self.speedup_scale
+        self.bullet_speed_factor *= self.speedup_scale
+        self.alien_Speed_factor *= self.speedup_scale
+
+        self.alien_points = int(self.alien_points * self.score_scale)
 
