@@ -8,6 +8,7 @@ from pygame.sprite import Group
 from game_Stats import GameStats
 import game_functions as gf
 from scoreboard import scoreboard
+import time
 def run_game():
  # Initialize game and create a screen object.
     pygame.init()
